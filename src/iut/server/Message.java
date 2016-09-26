@@ -12,15 +12,16 @@ import java.io.Serializable;
  * @author tanmaster
  */
 public class Message implements Serializable{
-    String messageType, sender;
+    String messageType, senderType, senderName;
     
-     public Message(String messageType, String sender){
+     public Message(String messageType, String senderType, String senderName){
         this.messageType = messageType;
-        this.sender = sender;
+        this.senderType = senderType;
+        this.senderName = senderName;
     }
     
     @Override
     public String toString(){
-        return ""+messageType+" "+sender+"";
+        return ""+messageType+" "+senderType+" "+senderName+"";
     }
 }
